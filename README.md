@@ -216,3 +216,11 @@ frontend/
 - Stream keys hidden from public API responses
 - Input validation with **class-validator** DTOs
 - CORS restricted to frontend origins
+
+
+## Team Contribution
+
+## Team Contribution
+
+- **Narendra Singh** — Designed and built end-to-end RTMP → HLS pipeline with NGINX, secure stream key validation, and low-latency (~3s chunked) streaming, implemented real-time chat (WebSocket), subscription logic (FREE vs PAID), and full integration of OBS → NGINX → Backend → React playback system
+- **Keshav Rajput** — Designed and analyzed system use-case diagrams to identify key actors and flows, built an interactive and scalable frontend UI/UX, and implemented robust user feedback and error-handling mechanisms to ensure a smooth user experience
