@@ -1,8 +1,14 @@
-# 🎬 Live Streaming Platform — MVP
+# Live Streaming Platform — MVP
 
 A production-grade live streaming platform built with **NestJS + TypeScript** (backend) and **React JSX** (frontend).
 
-## 🏗️ Architecture
+### Preview
+<img width="1795" height="1132" alt="Screenshot 2026-04-16 at 11 22 21 AM" src="https://github.com/user-attachments/assets/1dee6b13-2975-4f52-90ba-916a6980254b" />
+<img width="1800" height="947" alt="Screenshot 2026-04-16 at 11 22 32 AM" src="https://github.com/user-attachments/assets/cc8fb4cc-99cc-4b2e-bbc7-40c8b067f6c1" />
+<img width="1800" height="957" alt="Screenshot 2026-04-16 at 11 22 57 AM" src="https://github.com/user-attachments/assets/b6242586-20df-48bf-be97-7c8fe40f8aa6" />
+
+
+## Architecture
 
 ```
 Backend:  NestJS + TypeScript + Prisma ORM + PostgreSQL + Socket.io
@@ -33,7 +39,13 @@ Controllers → Services → Repositories → Database (Prisma)
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
+
+### 0. Repo Setup - Fork
+
+```bash
+git clone https://github.com/yourusername/SDSE-NST.git
+```
 
 ### Prerequisites
 
@@ -42,6 +54,16 @@ Controllers → Services → Repositories → Database (Prisma)
 - (Optional) Nginx with RTMP module for actual streaming
 
 ### 1. Backend Setup
+
+- Make sure add .evn and add
+```bash
+DATABASE_URL='neon-db'
+JWT_SECRET='your-secrel.'
+JWT_EXPIRATION='7d'
+PORT=3001
+RTMP_URL='rtmp://localhost/live'
+HLS_BASE_URL='http://localhost:8080/hls'
+```
 
 ```bash
 cd server
@@ -67,6 +89,11 @@ Frontend runs on `http://localhost:5173`
 ### 3. (Optional) Nginx RTMP
 
 ```bash
+# One line
+brew install nginx
+nginx
+
+# if did't work try
 # macOS
 brew install nginx-full --with-rtmp-module
 
@@ -77,7 +104,7 @@ sudo nginx
 
 ---
 
-## 📡 API Endpoints
+## API Endpoints
 
 ### Auth
 | Method | Endpoint | Description |
@@ -127,7 +154,7 @@ sudo nginx
 
 ---
 
-## 🔧 OBS Configuration
+## OBS Configuration
 
 ```
 Server:     rtmp://localhost/live
@@ -138,7 +165,7 @@ Find your stream key on the Dashboard page after logging in.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 server/
@@ -182,7 +209,7 @@ frontend/
 
 ---
 
-## 🔐 Security
+## Security
 
 - Passwords hashed with **bcrypt** (12 rounds)
 - **JWT** authentication on protected routes
